@@ -1,0 +1,19 @@
+name: Test
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Run tests
+        run: cd priority_queue && source test.sh
+
+      - name: Publish Unit Test Results
+        uses: actions/upload-artifact@v4 
+        with:
+          name: TestResults
+          path: ./build/artifacts/test/junit_tests_report.xml
