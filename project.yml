@@ -80,8 +80,6 @@
     - junit 
     - cppunit 
     - html 
-  # :junit:
-  #   :filename: ./results/test-result.xml 
 
 # override the default extensions for your system and toolchain
 :extension:
@@ -102,9 +100,9 @@
     - +:test/**
     - -:test/support
   :source:
-    - src/**
+    - examples/**
   :include:
-    - src/** # In simple projects, this entry often duplicates :source
+    - examples/** # In simple projects, this entry often duplicates :source
   :support:
     - test/support
   :libraries: []
