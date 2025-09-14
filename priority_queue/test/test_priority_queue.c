@@ -21,6 +21,7 @@ void test_enqueue_dequeue(void) {
     printf("Now dequeueing and printing each item one by one\n\n"); 
     pq_item prev_item = {.priority = ~0, .insertCount = 0};
     pq_item test_item;
+    TEST_ASSERT_TRUE(0);
     while(my_queue.size >0) {
         pq_dequeue(&my_queue, &test_item);
         pq_item_print(&test_item); 
