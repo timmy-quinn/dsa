@@ -1,6 +1,13 @@
-name: Test
+name: CI - Unit Test
+
 on:
-  workflow_dispatch:
+  push: 
+    branches: 
+      - main
+  pull_request:
+    branches: 
+      - main
+  
 
 jobs:
   build:
@@ -9,8 +16,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
+      - name: Make executable
+        run: chmod +x ./priority_queue/test.sh
+
       - name: Run tests
-        run: cd priority_queue && source test.sh
+        run: cd priority_queue && ls -a test && ./test.sh
 
       - name: Publish Unit Test Results
         uses: actions/upload-artifact@v4 

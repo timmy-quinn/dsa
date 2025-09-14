@@ -3,7 +3,6 @@
 This is just a place for me to get some practice with some basic data 
 structures and algorithms, by implementing them in C.
 
-
 ### Ceedling && Docker
 Run the setup script
 
