@@ -20,7 +20,7 @@ jobs:
         run: chmod +x ./priority_queue/test.sh
 
       - name: Run tests
-        run: cd priority_queue && ls -a && ./test.sh
+        run: cd priority_queue && ls -a test && ./test.sh
 
       - name: Publish Unit Test Results
         uses: actions/upload-artifact@v4 
