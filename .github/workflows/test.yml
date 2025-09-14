@@ -16,6 +16,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
+      - name: Make executable
+        run: chmod +x ./priority_queue/test.sh
+
       - name: Run tests
         run: ./priority_queue/test.sh
 
